@@ -1,0 +1,8 @@
+#ifndef LIBDOP_VERSION_H
+#define LIBDOP_VERSION_H
+
+#define VER_MAJOR 1
+#define VER_MINOR 0
+#define VER_REVISION 0
+
+#endif // LIBDOP_VERSION_H
