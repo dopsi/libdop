@@ -55,6 +55,7 @@ MKDIR = mkdir
 PACKAGE = $(TARGET)-$(VERSION).tar
 
 # Installation options
+DESTDIR	= 
 PREFIX	= /usr/local
 OWNER	= root
 GROUP	= root
@@ -88,18 +89,18 @@ pack-test: pack
 	rm -rf test
 
 install:	$(TARGET).so
-	$(MKDIR) -p $(PREFIX)/lib
-	$(INSTALL) -s $(TARGET).so $(PREFIX)/lib
-	$(MKDIR) -p $(PREFIX)/include/dop
-	$(CP) -r include/dop/* $(PREFIX)/include/dop
-	$(MKDIR) -p $(PREFIX)/lib/pkgconfig
-	$(CP) -rT pkgconfig $(PREFIX)/lib/pkgconfig
-	sed -i -e "s|MK_PREFIX|$(PREFIX)|g" $(PREFIX)/lib/pkgconfig/libdop.pc
+	$(MKDIR) -p $(DESTDIR)$(PREFIX)/lib
+	$(INSTALL) -s $(TARGET).so $(DESTDIR)$(PREFIX)/lib
+	$(MKDIR) -p $(DESTDIR)$(PREFIX)/include/dop
+	$(CP) -r include/dop/* $(DESTDIR)$(PREFIX)/include/dop
+	$(MKDIR) -p $(DESTDIR)$(PREFIX)/lib/pkgconfig
+	$(CP) -rT pkgconfig $(DESTDIR)$(PREFIX)/lib/pkgconfig
+	sed -i -e "s|MK_PREFIX|$(PREFIX)|g" $(DESTDIR)$(PREFIX)/lib/pkgconfig/libdop.pc
 
 depend:
 	$(MAKE) -C src $@
 
 uninstall:
-	$(RM) -r $(PREFIX)/include/dop
-	$(RM) $(PREFIX)/lib/libdop.so
-	$(RM) $(PREFIX)/lib/pkgconfig/libdop.pc
+	$(RM) -r $(DESTDIR)$(PREFIX)/include/dop
+	$(RM) $(DESTDIR)$(PREFIX)/lib/libdop.so
+	$(RM) $(DESTDIR)$(PREFIX)/lib/pkgconfig/libdop.pc
