@@ -5,6 +5,11 @@
 extern "C" {
 #endif
 
+/**
+ * @brief Recursively remove a path
+ * @param path Path to be removed
+ * @return Something
+ **/
 int remove_r(char * path);
 
 #ifdef __cplusplus
