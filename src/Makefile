@@ -45,4 +45,5 @@ depend:
 # DEPENDENCIES (DO NOT DELETE)
 filesystem.o: filesystem.c ../include/dop/filesystem.h \
  ../include/dop/version.h
-utils.o: utils.c ../include/dop/version.h
+memory.o: memory.c ../include/dop/memory.h
+utils.o: utils.c ../include/dop/utils.h ../include/dop/version.h
