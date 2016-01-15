@@ -10,9 +10,9 @@
 int remove_r(char * path) {
 	char p[1024] = { '\0' };
 	int ret=0;
+	struct stat s;
 	
 	strcpy(p, path);
-	struct stat s;
 
 	if (stat(path, &s)) {
 		perror(path);
@@ -20,7 +20,7 @@ int remove_r(char * path) {
 	}
 
 	if (S_ISDIR(s.st_mode)) {
-		// remove directory
+		/* remove directory */
 		DIR * d = opendir(path);
 		struct dirent * de;
 

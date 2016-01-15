@@ -20,4 +20,4 @@ size_t buffer_length_check(char ** buffer, size_t size, size_t needed);
 }
 #endif
 
-#endif // LIBDOP_MEMORY_H
+#endif /* LIBDOP_MEMORY_H */

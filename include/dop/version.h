@@ -13,4 +13,4 @@ extern "C" {
 }
 #endif
 
-#endif // LIBDOP_VERSION_H
+#endif /* LIBDOP_VERSION_H */

@@ -16,4 +16,4 @@ int remove_r(char * path);
 }
 #endif
 
-#endif // LIBDOP_FILESYSTEM_H
+#endif /* LIBDOP_FILESYSTEM_H */

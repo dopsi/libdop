@@ -19,4 +19,4 @@ size_t hexdump(void * data, size_t len);
 }
 #endif
 
-#endif // LIBDOP_UTILS_H
+#endif /* LIBDOP_UTILS_H */

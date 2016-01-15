@@ -10,7 +10,8 @@
 size_t hexdump(void * data, size_t len) {
 	size_t num_bytes = 0;
 	char text_buffer[HEXDUMP_LEN+1] = { '\0' };
-	for (size_t i = 0; i < len; ++i) {
+	size_t i;
+	for (i = 0; i < len; ++i) {
 		printf("%x ", ((char*)data)[i]);
 		if (isprint(((char*)data)[i])) {
 			sprintf(text_buffer + i%HEXDUMP_LEN, "%c", ((char*)text_buffer)[i]);

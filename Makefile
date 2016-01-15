@@ -27,7 +27,7 @@
 
 # Compilation options
 export CC = gcc
-export CFLAGS = -c -Wall -g -fPIC
+export CFLAGS = -c -Wall -Werror -pedantic -ansi  -fPIC
 LDFLAGS = -shared
 
 # Directories
