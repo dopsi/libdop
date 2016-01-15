@@ -1,4 +1,6 @@
 .exrc
+*.o
+*.test
 *.so
 *.tar.xz
 doc

@@ -70,10 +70,11 @@ $(TARGET).so:	src
 src:
 	$(MAKE) -C src
 
-.PHONY:	src clean mrproper install init run pack pack-test depend uninstall
+.PHONY:	src clean mrproper install init run pack pack-test depend uninstall tests
 
 clean:
 	rm -rf $(OBJECTS)
+	$(MAKE) -C tests $@
 
 distclean: clean
 	rm -rf $(TARGET).so
@@ -82,6 +83,9 @@ distclean: clean
 pack:	distclean
 	tar cf $(PACKAGE) $(FILES)
 	xz -f $(PACKAGE)
+
+tests:	$(TARGET).so
+	$(MAKE) -B -C tests
 
 pack-test: pack
 	mkdir test
@@ -99,6 +103,7 @@ install:	$(TARGET).so
 
 depend:
 	$(MAKE) -C src $@
+	$(MAKE) -C tests $@
 
 uninstall:
 	$(RM) -r $(DESTDIR)$(PREFIX)/include/dop
