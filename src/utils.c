@@ -11,15 +11,30 @@ size_t hexdump(void * data, size_t len) {
 	size_t num_bytes = 0;
 	char text_buffer[HEXDUMP_LEN+1] = { '\0' };
 	size_t i;
-	for (i = 0; i < len; ++i) {
-		printf("%x ", ((char*)data)[i]);
-		if (isprint(((char*)data)[i])) {
-			sprintf(text_buffer + i%HEXDUMP_LEN, "%c", ((char*)text_buffer)[i]);
+	size_t add;
+	add = (len % HEXDUMP_LEN) ? (HEXDUMP_LEN - (len % HEXDUMP_LEN)) : 0;
+	printf("len = %lu\n", len);
+	printf("add = %lu\n", add);
+	for (i = 0; i < len + add; ++i) {
+		if (i%HEXDUMP_LEN == 0) {
+			printf("%3.3lx ", i);
+		}
+		if (i%2 == 0) {
+			printf(" ");
+		}
+		if (i < len) {
+			printf("%2.2x", (unsigned char)((char*)data)[i]);
+			if (isprint(((char*)data)[i])) {
+				text_buffer[i%HEXDUMP_LEN] = ((char*)data)[i];
+			} else {
+				text_buffer[i%HEXDUMP_LEN] = '.';
+			}
 		} else {
-			sprintf(text_buffer + i%HEXDUMP_LEN, ".");
+			printf("  ");
+			text_buffer[i%HEXDUMP_LEN] = ' ';
 		}
 		if ((i+1)%HEXDUMP_LEN == 0) {
-			printf("%s\n", text_buffer);
+			printf("  %s\n", text_buffer);
 			memset(text_buffer, '\0', sizeof(text_buffer));
 		}
 	}
