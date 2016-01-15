@@ -37,7 +37,7 @@ INCLUDES = include/dop
 # Files
 SOURCES = $(wildcard src/*.c)
 OBJECTS = $(SOURCES:.c=.o)
-FILES = src include pkgconfig Makefile
+FILES = src include pkgconfig tests Makefile
 
 # Program attributes
 TARGET = libdop
@@ -89,7 +89,7 @@ tests:	$(TARGET).so
 
 pack-test: pack
 	mkdir test
-	(cp $(PACKAGE).xz test && cd test && tar xf $(PACKAGE).xz && $(MAKE)) || rm -rf test
+	(cp $(PACKAGE).xz test && cd test && tar xf $(PACKAGE).xz && $(MAKE) tests) || rm -rf test
 	rm -rf test
 
 install:	$(TARGET).so
