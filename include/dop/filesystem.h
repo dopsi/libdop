@@ -8,7 +8,7 @@ extern "C" {
 /**
  * @brief Recursively remove a path
  * @param path Path to be removed
- * @return Something
+ * @return 0 on success
  **/
 int remove_r(char * path);
 
