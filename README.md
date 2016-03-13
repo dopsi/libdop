@@ -1,7 +1,10 @@
-`libdop` is a utilities library by Simon Doppler.
+libdop
+======
+
+`libdop` is a C utilities library by Simon Doppler.
 
 Licence
-=======
+-------
 
 > The MIT License (MIT)
 > 
@@ -27,7 +30,7 @@ Licence
 > SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Versionning
-===========
+-----------
 
 This project follows the semantic versionning guidelines provided at
 [semver.org](http://semver.org/) with versions numbered as `MAJOR.MINOR.
@@ -43,6 +46,6 @@ should its API.
 Versions history can be found in the file ChangeLog.md
 
 Author
-======
+------
 
 `libdop` (c) 2016 Simon Doppler *<dopsi.dev@gmail.com>*
