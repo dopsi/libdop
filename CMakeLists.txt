@@ -32,10 +32,10 @@ target_link_libraries(hexdump_test
 # Install
 install(TARGETS dop LIBRARY DESTINATION lib)
 install_files("/include/dop" .h
-	${CMAKE_SOURCE_DIR}/include/utils.h
-	${CMAKE_SOURCE_DIR}/include/memory.h
-	${CMAKE_SOURCE_DIR}/include/filesystem.h
-	${CMAKE_SOURCE_DIR}/include/version.h)
+	${CMAKE_SOURCE_DIR}/src/dop/utils.h
+	${CMAKE_SOURCE_DIR}/src/dop/memory.h
+	${CMAKE_SOURCE_DIR}/src/dop/filesystem.h
+	${CMAKE_SOURCE_DIR}/src/dop/version.h)
 install_files("/share/pkgconfig" .pc
 	${CMAKE_SOURCE_DIR}/pkgconfig/dop.pc)
 
