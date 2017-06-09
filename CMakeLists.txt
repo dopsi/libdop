@@ -25,8 +25,14 @@ add_library(dop SHARED
 add_executable(hexdump_test
 	tests/hexdump-test.c)
 
+add_executable(buffer_test
+	tests/buffer-test.c)
+
 # Linking
 target_link_libraries(hexdump_test
+	dop)
+
+target_link_libraries(buffer_test
 	dop)
 
 # Install
@@ -40,4 +46,5 @@ install_files("/share/pkgconfig" .pc
 	${CMAKE_SOURCE_DIR}/pkgconfig/dop.pc)
 
 # Tests
-add_test(NAME hexdump_test COMMAND hexdump_test)
+add_test(NAME hexdump COMMAND hexdump_test)
+add_test(NAME buffer COMMAND buffer_test)
