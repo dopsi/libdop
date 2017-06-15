@@ -16,6 +16,8 @@ set(libdop_VERSION_MAJOR 1)
 set(libdop_VERSION_MINOR 1)
 set(libdop_VERSION_REVISION 2)
 
+include_directories(BEFORE ${PROJECT_BINARY_DIR} ${PROJECT_SOURCE_DIR}/src)
+
 # Build
 add_library(dop SHARED
 	src/filesystem.c
@@ -28,11 +30,17 @@ add_executable(hexdump_test
 add_executable(buffer_test
 	tests/buffer-test.c)
 
+add_executable(hash_djb2_test
+	tests/hash_djb2-test.c)
+
 # Linking
 target_link_libraries(hexdump_test
 	dop)
 
 target_link_libraries(buffer_test
+	dop)
+
+target_link_libraries(hash_djb2_test
 	dop)
 
 # Install
@@ -48,3 +56,4 @@ install_files("/share/pkgconfig" .pc
 # Tests
 add_test(NAME hexdump COMMAND hexdump_test)
 add_test(NAME buffer COMMAND buffer_test)
+add_test(NAME djb2_hash_on_string COMMAND hash_djb2_test)

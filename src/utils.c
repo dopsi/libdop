@@ -40,3 +40,20 @@ size_t hexdump(void * data, size_t len) {
 	}
 	return num_bytes;
 }
+
+/**
+ * From http://www.cse.yorku.ca/~oz/hash.html
+ * Modified to be used on void* data with not null terminator
+ **/
+unsigned long hash_djb2(void *data, size_t len) {
+	void *current_data = data;
+	unsigned long hash = 5381;
+	int c;
+	
+	while (current_data != data+len) {
+		c = *(unsigned char*)current_data++;
+		hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+	}
+	
+	return hash;
+}

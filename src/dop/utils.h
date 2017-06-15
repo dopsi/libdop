@@ -15,6 +15,14 @@ extern "C" {
  **/
 size_t hexdump(void * data, size_t len);
 
+/**
+ * @brief return the djb2 hash of the data
+ * @param data address to start the hash from
+ * @param len length of the data to hash
+ * @return the hash
+ **/
+unsigned long hash_djb2(void *data, size_t len);
+
 #ifdef __cplusplus
 }
 #endif
