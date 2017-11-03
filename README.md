@@ -3,6 +3,8 @@ libdop
 
 `libdop` is a C utilities library by Simon Doppler.
 
+It features hash capabilities, double computations and memory operations.
+
 Licence
 -------
 
