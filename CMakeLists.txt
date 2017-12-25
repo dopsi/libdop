@@ -16,23 +16,26 @@ set(libdop_VERSION_MAJOR 1)
 set(libdop_VERSION_MINOR 1)
 set(libdop_VERSION_REVISION 2)
 
+set(C_STANDARD 11)
+
 include_directories(BEFORE ${PROJECT_BINARY_DIR} ${PROJECT_SOURCE_DIR}/src)
 
 # Build
 add_library(dop SHARED
-	src/filesystem.c
-	src/memory.c
-	src/utils.c
-	src/dmath.c)
+    src/filesystem.c
+    src/memory.c
+    src/utils.c
+    src/dmath.c
+    src/dstring.c)
 
 add_executable(hexdump_test
-	tests/hexdump-test.c)
+    tests/hexdump-test.c)
 
 add_executable(buffer_test
-	tests/buffer-test.c)
+    tests/buffer-test.c)
 
 add_executable(hash_djb2_test
-	tests/hash_djb2-test.c)
+    tests/hash_djb2-test.c)
 
 add_executable(dmath_max_test
     tests/dmath/max.c)
@@ -58,18 +61,24 @@ add_executable(dmath_sum_test
 add_executable(dmath_variance_test
     tests/dmath/variance.c)
 
+add_executable(dstring_test_trimwhitespace
+    tests/dstring/test_trimwhitespace.c)
+
+add_executable(dstring_test_strcharcount
+    tests/dstring/test_strcharcount.c)
+
 # Linking
 target_link_libraries(dop
     m)
 
 target_link_libraries(hexdump_test
-	dop)
+    dop)
 
 target_link_libraries(buffer_test
-	dop)
+    dop)
 
 target_link_libraries(hash_djb2_test
-	dop)
+    dop)
 
 target_link_libraries(dmath_max_test
     dop)
@@ -95,15 +104,21 @@ target_link_libraries(dmath_sum_test
 target_link_libraries(dmath_variance_test
     dop)
 
+target_link_libraries(dstring_test_trimwhitespace
+    dop)
+
+target_link_libraries(dstring_test_strcharcount
+    dop)
+
 # Install
 install(TARGETS dop LIBRARY DESTINATION lib)
 install_files("/include/dop" .h
-	${CMAKE_SOURCE_DIR}/src/dop/utils.h
-	${CMAKE_SOURCE_DIR}/src/dop/memory.h
-	${CMAKE_SOURCE_DIR}/src/dop/filesystem.h
-	${CMAKE_SOURCE_DIR}/src/dop/version.h)
+    ${CMAKE_SOURCE_DIR}/src/dop/utils.h
+    ${CMAKE_SOURCE_DIR}/src/dop/memory.h
+    ${CMAKE_SOURCE_DIR}/src/dop/filesystem.h
+    ${CMAKE_SOURCE_DIR}/src/dop/version.h)
 install_files("/share/pkgconfig" .pc
-	${CMAKE_SOURCE_DIR}/pkgconfig/dop.pc)
+    ${CMAKE_SOURCE_DIR}/pkgconfig/dop.pc)
 
 # Tests
 add_test(NAME hexdump COMMAND hexdump_test)
@@ -117,3 +132,5 @@ add_test(NAME dmath_range COMMAND dmath_range_test)
 add_test(NAME dmath_standart_deviation COMMAND dmath_standart_deviation_test)
 add_test(NAME dmath_sum COMMAND dmath_sum_test)
 add_test(NAME dmath_variance COMMAND dmath_variance_test)
+add_test(NAME dstring_test_trimwhitespace COMMAND dstring_test_trimwhitespace)
+add_test(NAME dstring_test_strcharcount COMMAND dstring_test_strcharcount)
