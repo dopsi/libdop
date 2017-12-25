@@ -1,13 +1,33 @@
-# Change Log
-All notable changes to this project will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
+# ChangeLog
 
-## [Unreleased] No date
-* `tests/` : Add the test system (Makefile-based)
-* `tests/hexdump.c` : create a test for hexdump
+## [2017-12-25] v1.2.0: Version 1.2.0
 
-### Changed
-* `src/utils.c` : change the output format, now completely functionnal
+* Add memory utilities
+* Add documentation
+* Update Makefile
+* Add Doxyfile
+* Use '-Werror -pedantic -ansi'
+* Add test system
+* Update hexdump function
+* Add tests to package
+* Add test string
+* Add news and changelog
+* Fix License in Readme
+* Add fix documentation
+* Fix title levels
+* Use CMake
+* Move include files
+* Add hexdump test
+* Add djb2 hash
+* Create the dmath functions
+* Add quick explanation
+* Create dstring functions
+* Make Doxyfile compliant with GitHub pages
+* Rewrite readme
+* Replace Changelog by automated tool output
+* Add doxygen output for github pages
 
-## [v1.0.0] 2016-01-16
-First release, nothing to add to this changelog entry.
+## [2016-01-09] v1.0.0: Make C++ friendly
+
+* Update Makefile install command
+* Make C++ friendly
