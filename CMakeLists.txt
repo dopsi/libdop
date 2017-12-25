@@ -13,8 +13,8 @@ enable_testing()
 # Set project data
 project(libdop)
 set(libdop_VERSION_MAJOR 1)
-set(libdop_VERSION_MINOR 1)
-set(libdop_VERSION_REVISION 2)
+set(libdop_VERSION_MINOR 2)
+set(libdop_VERSION_REVISION 0)
 
 set(C_STANDARD 11)
 

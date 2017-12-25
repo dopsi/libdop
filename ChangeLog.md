@@ -1,6 +1,6 @@
 # ChangeLog
 
-## [2017-12-25] unreleased: 
+## [2017-12-25] v1.2.0: Version 1.2.0
 
 * Add memory utilities
 * Add documentation
@@ -24,6 +24,8 @@
 * Create dstring functions
 * Make Doxyfile compliant with GitHub pages
 * Rewrite readme
+* Replace Changelog by automated tool output
+* Add doxygen output for github pages
 
 ## [2016-01-09] v1.0.0: Make C++ friendly
 
