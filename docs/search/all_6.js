@@ -1,0 +1,14 @@
+var searchData=
+[
+  ['main',['main',['../d1/d71/buffer-test_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;buffer-test.c'],['../d6/df8/max_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;max.c'],['../d5/d3a/mean_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;mean.c'],['../d4/d00/median_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;median.c'],['../d7/dce/min_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;min.c'],['../d6/df7/range_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;range.c'],['../d6/dd7/standart__deviation_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;standart_deviation.c'],['../d4/d64/sum_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;sum.c'],['../da/d69/variance_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;variance.c'],['../da/ded/test__strcharcount_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;test_strcharcount.c'],['../db/d96/test__trimwhitespace_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;test_trimwhitespace.c'],['../d3/d8e/hash__djb2-test_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;hash_djb2-test.c'],['../d2/d50/hexdump-test_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;hexdump-test.c']]],
+  ['max',['max',['../d7/d00/dmath_8c.html#ac74dc3e01bac23c48b2d33bf13f40637',1,'max(const double *list, size_t len):&#160;dmath.c'],['../da/dfb/dmath_8h.html#ac74dc3e01bac23c48b2d33bf13f40637',1,'max(const double *list, size_t len):&#160;dmath.c']]],
+  ['max_2ec',['max.c',['../d6/df8/max_8c.html',1,'']]],
+  ['mean',['mean',['../d7/d00/dmath_8c.html#a0ccf23ae2548d4c5b8a81c9dea44d953',1,'mean(const double *list, size_t len):&#160;dmath.c'],['../da/dfb/dmath_8h.html#a0ccf23ae2548d4c5b8a81c9dea44d953',1,'mean(const double *list, size_t len):&#160;dmath.c']]],
+  ['mean_2ec',['mean.c',['../d5/d3a/mean_8c.html',1,'']]],
+  ['median',['median',['../d7/d00/dmath_8c.html#a2e4eb0e321e6d629188fe9560e2c1f73',1,'median(const double *list, size_t len):&#160;dmath.c'],['../da/dfb/dmath_8h.html#a2e4eb0e321e6d629188fe9560e2c1f73',1,'median(const double *list, size_t len):&#160;dmath.c']]],
+  ['median_2ec',['median.c',['../d4/d00/median_8c.html',1,'']]],
+  ['memory_2ec',['memory.c',['../df/dd5/memory_8c.html',1,'']]],
+  ['memory_2eh',['memory.h',['../dc/d18/memory_8h.html',1,'']]],
+  ['min',['min',['../d7/d00/dmath_8c.html#a599d794215fc80bfe050eb28b5fef810',1,'min(const double *list, size_t len):&#160;dmath.c'],['../da/dfb/dmath_8h.html#a599d794215fc80bfe050eb28b5fef810',1,'min(const double *list, size_t len):&#160;dmath.c']]],
+  ['min_2ec',['min.c',['../d7/dce/min_8c.html',1,'']]]
+];
